@@ -3,7 +3,10 @@ using UnityEngine;
 
 namespace GameTemplate {
 
-  public class SingletonBehaviour<T> : MonoBehaviour where T : MonoBehaviour {
+  public abstract class SingletonBehaviour<T>
+    : MonoBehaviour
+    where T : MonoBehaviour
+  {
 
     private static T s_Instance;
     public static T Instance {
@@ -13,8 +16,6 @@ namespace GameTemplate {
     private static bool s_ApplicationIsQuitting = false;
 
     protected virtual void Start() {
-      DontDestroyOnLoad(gameObject);
-
       if (s_Instance == null) {
         s_Instance = this as T;
       }

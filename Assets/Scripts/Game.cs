@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameTemplate {
 
-  public abstract class Game<S> : SingletonBehaviour<Game<S>> {
+  public abstract class Game<S> : PersistentSingletonBehaviour<Game<S>> {
 
     [SerializeField]
     [HideInInspector]
