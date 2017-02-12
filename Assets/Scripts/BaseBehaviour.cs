@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameTemplate {
 
-  public class BasicBehaviour<S> : MonoBehaviour {
+  public class BaseBehaviour<S> : MonoBehaviour {
 
     public Game<S> Game {
       get { return Game<S>.Instance; }

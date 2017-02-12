@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace GameTemplate {
 
-  public abstract class SingletonBehaviour<T>
-    : MonoBehaviour
+  public abstract class SingletonBehaviour<S, T>
+    : BaseBehaviour<S>
     where T : MonoBehaviour
   {
 
