@@ -28,12 +28,10 @@ namespace GameTemplate {
 
     private IEnumerator ChangeState(GameState<S> state) {
       if (m_State != null) {
-        var oldState = m_State;
-        m_State = null;
-        yield return StartCoroutine(oldState.OnStateExit());
+        yield return StartCoroutine(m_State.OnStateExit());
       }
-      yield return StartCoroutine(state.OnStateEnter());
       m_State = state;
+      yield return StartCoroutine(state.OnStateEnter());
     }
   }
 }
